@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=1]
+
+[sub_resource type="Curve2D" id=1]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 21, 45, 0, 0, 0, 0, 88, 39, 0, 0, 0, 0, 158, 67, 0, 0, 0, 0, 181, 103, 0, 0, 0, 0, 113, 86, 0, 0, 0, 0, 69, 103, 0, 0, 0, 0, 27, 88, 0, 0, 0, 0, 14, 74, 0, 0, 0, 0, 20, 58, 0, 0, 0, 0, 21, 45 )
+}
+
+[node name="Path" type="Path2D"]
+curve = SubResource( 1 )
+
+[node name="PathFollow2D" type="PathFollow2D" parent="."]
+position = Vector2( 21, 45 )
+rotation = -0.0893148
+
+[node name="Player" parent="PathFollow2D" instance=ExtResource( 1 )]
+rotation = 1.48004

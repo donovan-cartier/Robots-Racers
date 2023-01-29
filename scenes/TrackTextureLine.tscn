@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://ressources/track.png" type="Texture" id=1]
+[ext_resource path="res://scenes/TrackTextureLine.gd" type="Script" id=2]
+
+[node name="TrackTextureLine" type="Line2D"]
+default_color = Color( 1, 1, 1, 1 )
+texture = ExtResource( 1 )
+texture_mode = 1
+joint_mode = 1
+script = ExtResource( 2 )

@@ -13,10 +13,10 @@ func _ready():
 
 func setup(player):
 	$PlayerSprite.texture = player.get_node("Sprite").texture
-	$Lap.text = "Lap " + str(player.current_lap) + "/" + str(gamerules.laps_to_win)
+	$Lap.text = str(player.current_lap) + "/" + str(gamerules.laps_to_win)
 	player.progress_hud = self
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
 func update_hud(player):
-	$Lap.text = "Lap " + str(player.current_lap) + "/" + str(gamerules.laps_to_win)
+	$Lap.text = str(player.current_lap) + "/" + str(gamerules.laps_to_win)

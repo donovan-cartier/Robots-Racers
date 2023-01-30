@@ -5,12 +5,13 @@ extends Line2D
 # var a = 2
 # var b = "text"
 
-onready var path = get_tree().get_root().get_node("Track/Path")
+export (String) var path
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	print(path)
-	self.points = path.curve.get_baked_points()
+	var pathLoad = get_node(path)
+	self.points = pathLoad.curve.get_baked_points()
 	print('populated')
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

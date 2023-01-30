@@ -12,7 +12,7 @@ onready var player_progress = load("res://scenes/Player_Progress.tscn")
 func _ready():
 	for player in players:
 		var pp_hud = player_progress.instance()
-		add_child(pp_hud)
+		$Players.add_child(pp_hud)
 		pp_hud.setup(player)
 
 

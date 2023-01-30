@@ -39,6 +39,8 @@ func _process(delta):
 		move_mode.MASH:
 			if Input.is_action_just_pressed("accelerate"):
 				course_path.offset += speed * delta
+		move_mode.ALTERNATE:
+			pass
 				
 func pass_lap():
 	current_lap += 1

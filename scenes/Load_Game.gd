@@ -15,11 +15,12 @@ func _ready():
 	
 #	Instantiate players
 	var i = 0
-	for player in Gamerules.players:
+	for player_info in Gamerules.players:
 		var new_player = player_node.instance()
-		new_player.player_name = player
+		new_player.player_name = player_info[0]
+		new_player.color = new_player.colors[player_info[1]]
 		paths[i].add_child(new_player)
-		print('instantiating player:' + str(player))
+		new_player.rotation_degrees = 90.0
 		i += 1
 		
 #	Load HUD

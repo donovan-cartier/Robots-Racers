@@ -9,7 +9,7 @@ var default_speed = 200
 var speed = default_speed
 var current_lap = 0
 enum move_mode {NORMAL, ALTERNATE, MASH}
-enum colors {blue, red, yellow}
+var colors = ["blue", "red", "yellow"]
 
 var current_move_mode = move_mode.NORMAL
 var color
@@ -25,7 +25,6 @@ onready var course_path = get_parent()
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	randomize()
-	color = colors.keys()[randi()%colors.size()]
 	var colorPath = "res://ressources/robot_" + str(color) + ".png"
 	$Sprite.texture = load(colorPath)
 	$PlayerInfo/PlayerName.text = player_name

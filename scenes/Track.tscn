@@ -26,6 +26,7 @@ tile_data = PoolIntArray( 0, 1, 0, 1, 1, 0, 2, 1, 0, 3, 1, 0, 4, 1, 0, 5, 1, 0, 
 path = "/root/Track/Path"
 
 [node name="TrackTextureLine2" parent="." instance=ExtResource( 4 )]
+points = PoolVector2Array( 234, -15 )
 path = "/root/Track/Path2"
 
 [node name="SandArea" parent="." instance=ExtResource( 3 )]
@@ -42,9 +43,6 @@ rotation = 0.790579
 [node name="Path2" parent="." instance=ExtResource( 1 )]
 curve = SubResource( 1 )
 
-[node name="ItemBox" parent="Path2" instance=ExtResource( 9 )]
-position = Vector2( 88, 56 )
-
 [node name="Game_HUD" parent="." instance=ExtResource( 5 )]
 anchor_top = 0.5
 anchor_bottom = 0.5
@@ -53,3 +51,6 @@ __meta__ = {
 }
 
 [node name="Gamerules" parent="." instance=ExtResource( 6 )]
+
+[node name="ItemBox" parent="." instance=ExtResource( 9 )]
+position = Vector2( 88, 56 )

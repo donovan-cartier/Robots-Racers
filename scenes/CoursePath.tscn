@@ -11,3 +11,5 @@ _data = {
 curve = SubResource( 1 )
 
 [node name="Player_Path" parent="." groups=["player_path"] instance=ExtResource( 1 )]
+position = Vector2( 48, 64 )
+rotation = -0.785396

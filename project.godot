@@ -21,8 +21,12 @@ _global_script_class_icons={
 [application]
 
 config/name="RobotsRacers"
-run/main_scene="res://scenes/Track.tscn"
+run/main_scene="res://scenes/Game_Settings.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+Gamerules="*res://scenes/Gamerules.gd"
 
 [display]
 

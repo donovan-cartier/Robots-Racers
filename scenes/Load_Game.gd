@@ -1,0 +1,31 @@
+extends Node2D
+
+
+# Declare member variables here. Examples:
+# var a = 2
+# var b = "text"
+onready var paths = get_tree().get_nodes_in_group("player_path")
+var player_node = load("res://scenes/Player.tscn")
+var game_hud = load("res://scenes/Game_HUD.tscn")
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	var available_paths = paths
+	print(Gamerules.players)
+	
+#	Instantiate players
+	var i = 0
+	for player in Gamerules.players:
+		var new_player = player_node.instance()
+		new_player.player_name = player
+		paths[i].add_child(new_player)
+		print('instantiating player:' + str(player))
+		i += 1
+		
+#	Load HUD
+	add_child(game_hud.instance())
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+#func _process(delta):
+#	pass

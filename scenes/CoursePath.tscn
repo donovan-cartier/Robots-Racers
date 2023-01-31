@@ -10,4 +10,4 @@ _data = {
 [node name="Path" type="Path2D"]
 curve = SubResource( 1 )
 
-[node name="Player_Path" parent="." instance=ExtResource( 1 )]
+[node name="Player_Path" parent="." groups=["player_path"] instance=ExtResource( 1 )]

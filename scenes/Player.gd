@@ -14,6 +14,7 @@ enum colors {blue, red, yellow}
 var current_move_mode = move_mode.NORMAL
 var color
 var id
+var player_name
 
 var progress_hud
 
@@ -27,6 +28,7 @@ func _ready():
 	color = colors.keys()[randi()%colors.size()]
 	var colorPath = "res://ressources/robot_" + str(color) + ".png"
 	$Sprite.texture = load(colorPath)
+	$PlayerInfo/PlayerName.text = player_name
 	id = get_tree().get_nodes_in_group("player").size()
 	print("player " + str(color) + " => ID: " + str(id))
 

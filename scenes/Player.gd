@@ -97,8 +97,9 @@ func use_missile():
 func fire_missile():
 	var mouse_pos = get_viewport().get_mouse_position()
 	var missile_instance = missile.instance()
-	missile_instance.global_position = mouse_pos
+	missile_instance.global_position = global_position
 	get_tree().get_root().get_node("Track").add_child(missile_instance)
+	missile_instance.start(global_transform, mouse_pos)
 	print("missile shot")
 	is_aiming_missile = false
 	Input.set_custom_mouse_cursor(null)

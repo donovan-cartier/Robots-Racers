@@ -5,7 +5,7 @@ var item_in_box
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	item_in_box = ITEMS[1]
+	item_in_box = ITEMS[0]
 	print(item_in_box)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
